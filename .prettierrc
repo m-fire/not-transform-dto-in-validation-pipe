@@ -1,0 +1,9 @@
+{
+  "endOfLine":"auto",
+  "tabWidth": 4,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": false,
+  "preferSingleLine": false,
+  "memberExpression.linePerExpression": true
+}
