@@ -10,7 +10,6 @@ import {
 } from 'class-validator'
 import { UserEntity, UserProps } from '@src-module/user/domain'
 import { InitialValue, Messages } from '@src-support/domain/constant/enums'
-import { genSalt, hash } from 'bcrypt'
 import { Objects, PlainObject } from '@src-support/infra/typescript'
 import { ResourceDuplicatedException } from '@src-support/infra/web/exception'
 
@@ -64,7 +63,7 @@ export class SignUpUserRequest
     }
 
     private async encrypt(password: string) {
-        return await hash(password, await genSalt())
+        return password
     }
 
     static throwDuplicated(name: string, value: string) {

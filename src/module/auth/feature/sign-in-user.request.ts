@@ -1,4 +1,3 @@
-import { compare } from 'bcrypt'
 import { SignInFailException } from '@src-support/infra/web/exception'
 import { InitialValue, Messages } from '@src-support/domain/constant'
 import { PlainObject } from '@src-support/infra/typescript'
@@ -32,7 +31,7 @@ export class SignInUserRequest {
     readonly password: string = InitialValue.STRING
 
     async passwordEquals(origin: string): Promise<boolean> {
-        return await compare(this.password, origin)
+        return this.password === origin
     }
 
     static throwSignInFail(reason: string) {
