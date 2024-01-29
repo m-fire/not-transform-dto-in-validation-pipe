@@ -36,7 +36,7 @@
           <list>
             <DockerVolumeBindingImpl>
               <option name="containerPath" value="/var/lib/mysql" />
-              <option name="hostPath" value="D:\DEV\DockerVolumes\Database\mysql" />
+                <option name="hostPath" value=".\mysql"/>
             </DockerVolumeBindingImpl>
           </list>
         </option>
